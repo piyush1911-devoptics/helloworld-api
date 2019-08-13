@@ -17,6 +17,7 @@ pipeline {
       when {
         beforeAgent true
         branch 'test'
+        error 'fake error to force failure in test stage/gate'
       }
       steps {
         copyArtifacts projectName: '../helloworld-api/development'
